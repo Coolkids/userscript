@@ -1,0 +1,9 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+@-moz-document domain(lknovel.lightnovel.cn) {
+	*:not([class*="icon"]):not([class*="mui-amount"]):not([class*="chaoshi"]):not([class*="top-nav"]):not([href*="ju.taobao.com"]):not([class*="Icon"]):not([class*="prev"]):not([class*="next"]):not([class*="pay-"]):not([class*="tm-shop-list-"]):not(b):not(ins):not(i):not(s){
+		font-family:"Microsoft YaHei"!important;
+		text-shadow: 0 0px 0px #dcdcdc;
+	}
+	/*:not([href^="/illustration/image/"]) > img[src*="/illustration/"]{display:inline !important;}
+	*/
+}

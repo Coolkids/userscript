@@ -1,0 +1,30 @@
+/*@name        Yosemite Theme Patch
+  @namespace   http://www.runningcheese.com/firefox-v6
+  @description Yosemite Theme的一些附加样式
+  @author      runningcheese
+  @version     2.00          
+*/
+
+/* AGENT_SHEET */
+/*SimpleMusicPlayer*/
+#SimpleMusicPlayer .toolbarbutton-icon
+{list-style-image: url("chrome://userchromejs/content/images/custom_toolbar_16.png")!important;}
+#SimpleMusicPlayer .toolbarbutton-icon {-moz-image-region: rect(0px, 32px, 16px, 16px)!important;}
+#SimpleMusicPlayer {margin: 3px 0px !important;}		
+#SimpleMusicPlayer:hover{background-color: #e5e5e5 !important; }
+#SimpleMusicPlayer-panel .panel-arrow{padding-right: 15px !important;}
+
+
+/*Feed Button*/
+#urlbar-container #urlbar #urlbar-icons #feed-button .toolbarbutton-icon{
+list-style-image: url("chrome://userchromejs/content/icons/feed_button.png")!important;
+margin-bottom: -2px !important;
+margin-right: -2px !important;
+opacity: .4!important;
+}
+
+
+/*书签位置调整*/
+#bookmarks-menu-button>.toolbarbutton-menubutton-button{margin-left: -6px !important;margin-right: -6px !important;}
+
+

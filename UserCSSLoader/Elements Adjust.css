@@ -1,0 +1,836 @@
+/*@name        RunningCheese Firefox V6 Elements Adjust
+  @namespace   http://www.runningcheese.com/firefox-v6
+  @description V6版本的一些元素调整
+  @author      runningcheese
+  @version     1.00       
+*/
+
+
+/*=====================================图标调整=====================================*/ 
+/*前进刷新停止按钮调整*/
+#urlbar-reload-button,#urlbar-go-button {
+  margin-left:-2px !important;
+	margin-bottom:-2px !important;
+}
+#urlbar-stop-button{
+  margin-left:-1px !important;
+	margin-bottom:-4px !important;
+}
+
+/*历史菜单选项隐藏*/
+#ctraddon_history_showAllHistory,#ctraddon_history_showAllHistory+menuseparator,#ctraddon_history_recentlyClosedWindowsMenu,#ctraddon_history_recentlyClosedWindowsMenu+menuseparator,#ctraddon_history_recentlyClosedTabsMenu,#ctraddon_history_restoreLastSession,#ctraddon_history_sync-tabs,#sanitizeSeparator,#ctraddon_history_sanitizeHistory,#ctraddon_history_showAllHistory,#sanitizeSeparator {
+	display:none !important;
+}
+
+/*工具栏图标倒三角下拉选项隐藏*/
+.toolbarbutton-menubutton-dropmarker, .toolbarbutton-menu-dropmarker { display:none !important; }
+
+/*显示书签选项*/
+#bookmarks-menu-button .toolbarbutton-menubutton-dropmarker {display: block !important;}
+
+/*地址栏下拉栏隐藏*/
+.urlbar-history-dropmarker {
+	display:none!important;
+}
+
+/*ublock*/
+#ublock0-button .toolbarbutton-badge-container{padding:0px !important;}
+
+/*lastpass位置调整*/
+#lpt_lastpass-compact-btn .toolbarbutton-icon{margin-right:-2px!important;}
+[class="iconsetff4matchlploggedout chromeclass-toolbar-additional"]{margin-right:-4px!important;}
+
+/*ABP菜单隐藏*/
+.abp-contextmenuitem {display:none !important;}
+
+/*隐藏打开书签组*/
+.bookmarks-actions-menuseparator,.openintabs-menuitem{display:none !important;}
+
+/*隐藏identity bar*/
+#identity-icon-labels, #identity-popup {display: none!important; }
+
+/*书签文件夹下拉过长显示滚动条*/
+@-moz-document url(chrome://browser/content/browser.xul) {
+	.bookmark-item[container="true"]  scrollbox {
+	overflow-y:auto !important;
+}
+}
+
+/*在添加到书签对话框中加入关键词选项*/
+#editBMPanel_locationRow,#editBMPanel_descriptionRow {
+	visibility:visible;
+}
+#editBMPanel_tagsSelector[collapsed="true"] {
+	display:none !important;
+}
+
+/*粘贴并转到置顶*/
+.urlbar-textbox-container menuitem[anonid="paste-and-go"]:not([disabled="true"]) {-moz-box-ordinal-group: 0 !important;}
+.searchbar-textbox menuitem[anonid="paste-and-search"]:not([disabled="true"]) {-moz-box-ordinal-group: 0 !important;}
+#context-pasteandgo-forms:not([disabled="true"]) {-moz-box-ordinal-group: 0 !important;}
+
+/*URL栏刷新按钮位置调整*/
+#urlbar,.searchbar-textbox {
+	border-radius:5px !important;
+}
+#urlbar-reload-button,#urlbar-go-button,#urlbar-stop-button,.searchbar-engine-button {
+	margin-top:-2px !important;
+	margin-bottom:-2px !important;
+}
+#urlbar-go-button>.toolbarbutton-icon{
+	margin-right:2px !important;
+	margin-left:4px !important;
+}
+#urlbar-stop-button>.toolbarbutton-icon {
+	margin-right:2px !important;
+	margin-left:2px !important;
+}
+#urlbar-reload-button>.toolbarbutton-icon {
+	margin-right:1px !important;
+	margin-left: 2px !important;
+}
+#urlbar-stop-button>.toolbarbutton-icon {
+  margin-right:1px !important;
+	margin-left: 1px !important;
+}
+
+/*自动隐藏附加组件栏*/
+#ctraddon_addon-bar:not(:hover) {
+   opacity: 0 !important;
+   margin-bottom:0px !important;
+}
+#navigator-toolbox ~ #browser-bottombox #ctraddon_addon-bar {
+   opacity: 1 !important;
+   height: auto !important;
+   margin-bottom: 0px !important;
+}
+      
+/*显示丢失图片*/
+@-moz-document url-prefix(http), url-prefix(https), url-prefix(file) {
+img{font: 12px Arial!important;}
+img:-moz-broken{-moz-force-broken-image-icon: 1 !important; width: 48px; height: 24px;}
+}
+
+/*下拉框输入框字体*/
+select,textarea,input{
+	font-family:Tahoma,Microsoft Yahei, Arial, Helvetica, sans-serif !important;
+}
+
+/* 修改地址栏文字大小 */
+#nav-bar { -moz-appearance: none !important;
+ font-size: 100% !important; 
+}
+
+/*加长字体选择框*/
+#sizeVar,#minSize,#defaultFontSize{width:45px!important;}
+#FontsDialogPane{width:400px !important;}
+#DefaultCharsetList{width:150px!important;}
+#keepCookiesUntil{width:110px!important;}
+#locationBarSuggestion{width:90px!important;}
+#acceptThirdPartyMenu{width:115px!important;}
+#historyMode{width:160px!important;}
+#generalWindowOpen{width:135px!important;}
+#browserStartupPage{width:185px!important;}
+#selectLangs{width:125px!important;}
+
+/*去除点击时边框*/
+:focus {outline: none !important}
+
+
+/*=========地址栏图标排序========*/
+#ctraddon_addon-bar{-moz-box-ordinal-group:1 !important;}
+#feed-button{-moz-box-ordinal-group:2 !important;}
+#RIL_urlbar_add {-moz-box-ordinal-group:3 !important;}
+#RIL_urlbar_mark {-moz-box-ordinal-group:4 !important;}
+#bookmarks-menu-button{-moz-box-ordinal-group:5 !important;}
+
+
+
+
+/*========隐藏定制面板里的非线性图标========*/
+#wrapper-firebug-badged-button,
+#wrapper-superstart-toolbar-icon,
+#wrapper-siif_toolbarbutton,
+#wrapper-ctraddon_history-menu-toolbar-button,
+#wrapper-ctraddon_bookmarks-button,
+#wrapper-ctraddon_history-button,
+#wrapper-ctraddon_ctr-button,
+#wrapper-ctraddon_bookmarks-menu-toolbar-button,
+#wrapper-ctraddon_go-button,
+#wrapper-firebug-inspectorButton,
+#wrapper-grabanddrag-button,
+#wrapper-ctraddon_window-controls,
+#wrapper-ctraddon_statusbar,
+#wrapper-instantFox-options,
+#wrapper-readable_by_evernote__button
+{display:none !important;}
+
+
+
+
+
+/*========SimpleMusicPlayer图标========*/
+menuitem[type="radio"]:not([oncommand^="QLSOverlay."])>.menu-iconic-left>.menu-iconic-icon
+{display:-moz-box!important}
+
+[label="百度随心听FM"],[label="百度随心听"]{
+    list-style-image: url("chrome://userchromejs/content/icons/baidufm.png") !important;
+}
+[label="百度音乐盒 "]{
+    list-style-image: url("chrome://userchromejs/content/icons/baidu.png") !important;
+}
+[label="豆瓣FM"]{
+    list-style-image: url("chrome://userchromejs/content/icons/douban.png") !important;
+}
+[label="网易云音乐"],[label="网易云音乐FM"]{
+    list-style-image: url("chrome://userchromejs/content/icons/163.png") !important;
+}
+[label="心理FM"]{
+    list-style-image: url("chrome://userchromejs/content/icons/xinlifm.png") !important;
+}
+[label="落网电台"]{
+    list-style-image: url("chrome://userchromejs/content/icons/luo.png") !important;
+}
+[label="倾听网络收音机"]{
+    list-style-image: url("chrome://userchromejs/content/icons/radio.png") !important;
+}
+[label="酷狗音乐"]{
+    list-style-image: url("chrome://userchromejs/content/icons/kugou.png") !important;
+}
+[label="音悦台"]{
+    list-style-image: url("chrome://userchromejs/content/icons/yinyuetai.png") !important;
+}
+[label="喜玛拉雅"]{
+    list-style-image: url("chrome://userchromejs/content/icons/ximalaya.png") !important;
+}
+[label="奶酪电台"]{
+    list-style-image: url("chrome://userchromejs/content/icons/runningcheese.png") !important;
+}
+
+
+
+ 
+
+/*===================菜单图标调整================*/
+@-moz-document url("chrome://browser/content/browser.xul")
+{      
+/*隐藏右键菜单*/
+/*======标签页======*/
+#context_undoCloseTab,
+#context_closeTab,
+.search-go-button,
+#context_reloadTab,
+#context_reloadAllTabs
+{display: none !important;}
+  
+/*=====页面=====*/
+#spell-add-dictionaries-main,
+#context-viewbgimage,
+#context-selectall,
+#context-savepage,
+#s3menuwizard_openOptions_contextmenu,
+#ifox-context-searchselect,
+#context-page-translator,
+#context-openlink,
+#context-openlinkprivate,
+#context-openlinkintab,
+#context-sendimage,
+#context-setDesktopBackground,
+#context-copyimage,
+#RIL_context_saveLink,
+#context-bookmarklink,
+#context-savelink,
+#readable_by_evernote__context_menu,
+#lpt_lplogintolastpass,
+#lpt_lpfillformsmenu4,
+#lpt_lpcontentareacontextmenu,
+#RIL_context_clickMode,
+#RIL_context_savePage,
+#menu_firebug_firebugInspect,
+#context-keywordfield,
+#spell-check-enabled,
+#context-castvideo,
+#context-sendvideo,
+#spell-dictionaries
+{display: none !important;} 
+  
+  
+/*右键菜单改名*/
+/*#RIL_context_saveTabs>.menu-text{font-size:0!important;}
+#RIL_context_saveTabs:before{content:"将全部标签页加入Pocket";margin-left:30px;font-size:12px!important;display:-moz-box;} */
+
+
+/*右键菜单排序*/
+#context_pinTab,
+#context_unpinTab
+{-moz-box-ordinal-group: 1 !important;}
+  
+[label="关闭重复标签"]
+{-moz-box-ordinal-group: 2 !important;}
+
+[label="重新载入标签页"]
+{-moz-box-ordinal-group: 3 !important;}
+
+#context_openTabInWindow
+{-moz-box-ordinal-group: 4 !important;}
+
+[label="在侧边栏打开此页"]
+{-moz-box-ordinal-group: 5 !important;}
+	   
+[label="关闭右侧标签页"],
+#context_closeOtherTabs
+{-moz-box-ordinal-group: 8 !important;}
+	
+[label="关闭左侧标签页"]
+{-moz-box-ordinal-group: 7 !important;}
+	
+[label="关闭所有标签页"],
+[label="复制标签标题"]
+{-moz-box-ordinal-group: 8 !important;}
+
+[label="复制所有标签地址"]
+{-moz-box-ordinal-group: 9 !important;}
+    
+[label="复制Favicon的地址"]
+{-moz-box-ordinal-group: 10 !important;}
+    
+[label="保存所有图片到ZIP"],  
+#RIL_context_saveTabs,
+#context_bookmarkAllTabs
+{-moz-box-ordinal-group: 11 !important;}
+  
+  	
+	
+/*去书签分割条*/
+#context-sep-viewsource,
+#context-sep-viewbgimage,
+#context-navigation,
+#context-sep-navigation,
+#inspect-separator,
+#context-sep-selectall,
+#context-sep-open,
+#context-sep-copylink,
+#context-sep-copyimage,
+#tabContextMenu > menuseparator:nth-child(2),
+#tabContextMenu > menuseparator:nth-child(3),
+#tabContextMenu > menuseparator:nth-child(8),
+#tabContextMenu > menuseparator:nth-child(9),
+#tabContextMenu > menuseparator:nth-child(16),
+#tabContextMenu > menuseparator:nth-child(17),
+#tabContextMenu > menuseparator:nth-child(26),
+#contentAreaContextMenu > menuseparator:nth-child(125),
+#lpt_lpcontentareacontextmenuseparator,
+#contentAreaContextMenu > menuseparator:nth-child(122)
+{ display: none !important; }
+}
+
+
+
+/*=============为没有图标的菜单增加图标============*/
+#context-viewsource .menu-iconic-text,
+#context-viewinfo .menu-iconic-text,
+#context-inspect .menu-iconic-text,
+#context-viewimage .menu-iconic-text,
+#context-viewpartialsource-selection .menu-iconic-text,
+#context_closeOtherTabs .menu-iconic-text,
+#context_closeTabsToTheEnd .menu-iconic-text,
+[label="移动到新窗口"] .menu-iconic-text,
+#RIL_context_saveTabs .menu-iconic-text,
+#context_bookmarkAllTabs .menu-iconic-text,
+menuitem[label*="固定标签页"] .menu-iconic-text,
+#context-media-play .menu-iconic-text,
+#context-media-pause .menu-iconic-text,
+#context-media-mute .menu-iconic-text,
+#context-media-unmute .menu-iconic-text,
+#context-media-hidecontrols .menu-iconic-text,
+#context-media-showcontrols .menu-iconic-text, 
+#context-video-fullscreen .menu-iconic-text,
+#context-video-showstats .menu-iconic-text, 
+#context-video-hidestats .menu-iconic-text, 
+#context-savevideo .menu-iconic-text,
+#context-video-saveimage .menu-iconic-text,
+#context-copyvideourl .menu-iconic-text,
+#context-viewvideo .menu-iconic-text,
+#context-leave-dom-fullscreen .menu-iconic-text,
+#context-reloadimage .menu-iconic-text
+{margin-left: 11px !important;}
+
+
+/*inspect*/
+#context-inspect{
+    -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    list-style-image: url("chrome://userchromejs/content/icons/inspect.png")!important;
+    padding-left: 4px !important; padding-top: 1px !important; padding-bottom: 1px !important;
+}
+
+
+/*viewsource*/
+#context-viewsource,#context-viewpartialsource-selection{
+    -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    list-style-image: url("chrome://userchromejs/content/icons/viewsource.png")!important;
+     padding-left: 4px !important; padding-top: 1px !important; padding-bottom: 1px !important;
+}
+
+
+/*viewinfo*/
+#context-viewinfo{
+    -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    list-style-image: url("chrome://userchromejs/content/icons/viewinfo.png")!important;
+     padding-left: 4px !important; padding-top: 1px !important; padding-bottom: 1px !important;
+}
+
+/*viewimage*/
+#context-viewimage{
+    -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    list-style-image: url("chrome://userchromejs/content/icons/viewimage.png")!important;
+ padding-left: 4px !important; padding-top: 1px !important; padding-bottom: 1px !important;
+}
+
+
+/*context-searcher*/
+#context-searcher .menu-iconic-icon{
+    -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    list-style-image: url("chrome://userchromejs/content/icons/search.png")!important;
+}
+
+
+/*关闭其他标签页*/
+#context_closeOtherTabs{
+    -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    list-style-image:url("chrome://userchromejs/content/icons/close_others.png")!important;
+    padding-left: 4px !important;
+} 
+
+/*关闭右侧标签页*/
+#context_closeTabsToTheEnd {
+    -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    list-style-image:url("chrome://userchromejs/content/icons/close_right.png")!important;
+    padding-left: 4px !important;
+} 
+
+[label="关闭所有标签页"] {
+    -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    list-style-image:url("chrome://userchromejs/content/icons/close_all.png");
+
+} 
+
+[label="关闭重复标签"] {
+    -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    list-style-image:url("chrome://userchromejs/content/icons/close_repeat.png");
+
+} 
+[label="移动到新窗口"] {
+    -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    list-style-image:url("chrome://userchromejs/content/icons/newwindow.png");
+    padding-left: 4px !important;
+} 
+
+#RIL_context_saveTabs{
+    -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    list-style-image:url("chrome://userchromejs/content/icons/save.png");
+    padding-left: 4px !important;
+} 
+
+#context_bookmarkAllTabs{
+    -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    list-style-image:url("chrome://userchromejs/content/icons/bookmark.png");
+    padding-left: 4px !important;
+} 
+
+menuitem[label*="固定标签页"] {
+    -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    list-style-image:url("chrome://userchromejs/content/icons/pin.png")!important;
+    padding-left: 4px !important;
+} 
+
+/*图片另存为图标*/
+#siif_menu .menu-iconic-left{ list-style-image: url("chrome://userchromejs/content/icons/save.png")!important;}
+
+.abhere-menuitem {
+  list-style-image: url("chrome://userchromejs/content/icons/tab.png");}
+
+/*重新载入图像*/
+#context-reloadimage{
+    -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    list-style-image:url("chrome://userchromejs/content/icons/refresh.png");
+    padding-left: 4px !important;
+} 
+
+
+/*================音乐视频===============*/
+/*播放*/
+#context-media-play {
+	  -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    padding-left: 4px !important;
+    list-style-image:url("chrome://userchromejs/content/icons/play.png")!important;
+}
+/*暂停*/
+#context-media-pause{
+	  -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    padding-left: 4px !important;
+    list-style-image:url("chrome://userchromejs/content/icons/pause.png")!important;
+}
+/*静音*/
+#context-media-mute {
+	  -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    padding-left: 4px !important;
+    list-style-image:url("chrome://userchromejs/content/icons/mute.png")!important;
+}
+/*恢复声音*/
+#context-media-unmute {
+	  -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    padding-left: 4px !important;
+    list-style-image:url("chrome://userchromejs/content/icons/unmute.png")!important;
+}
+/*播放速度*/
+#context-media-playbackrat {
+	  -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    padding-left: 4px !important;
+    list-style-image:url("chrome://userchromejs/content/icons/speed.png")!important;
+}
+/*隐藏-显示控制界面*/
+#context-media-hidecontrols,#context-media-showcontrols  {
+	  -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    padding-left: 4px !important;
+    list-style-image:url("chrome://userchromejs/content/icons/control.png")!important;
+}
+/*全屏*/
+#context-video-fullscreen {
+	  -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    padding-left: 4px !important;
+    list-style-image:url("chrome://userchromejs/content/icons/fullscreen.png")!important;
+}
+/*统计信息*/
+#context-video-showstats, #context-video-hidestats {
+	  -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    padding-left: 4px !important;
+    list-style-image:url("chrome://userchromejs/content/icons/info.png");
+}
+/*将音频-视频另存为*/
+#context-savevideo {
+    -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    padding-left: 4px !important;
+    list-style-image:url("chrome://userchromejs/content/icons/save.png");
+}
+/*将快照另存为…*/
+#context-video-saveimage {
+	  -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    padding-left: 4px !important;
+    list-style-image:url("chrome://userchromejs/content/icons/imagesave.png")!important;
+}
+/*复制视频地址*/
+#context-copyvideourl {
+	  -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    padding-left: 4px !important;
+    list-style-image:url("chrome://userchromejs/content/icons/copy.png");
+}
+
+/*查看视频*/
+#context-viewvideo{
+    -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    list-style-image: url("chrome://userchromejs/content/icons/viewimage.png")!important;
+    padding-left: 4px !important; padding-top: 1px !important; padding-bottom: 1px !important;
+}
+
+/*退出全屏*/
+#context-leave-dom-fullscreen{
+    -moz-binding:url("chrome://global/content/bindings/menu.xml#menuitem-iconic")!important;
+    list-style-image: url("chrome://userchromejs/content/icons/restore.png")!important;
+    padding-left: 4px !important; padding-top: 1px !important; padding-bottom: 1px !important;
+}
+
+
+
+/*==========下拉地址栏扁平化样式========*/	
+@-moz-document url-prefix('chrome://') {
+	/*[[COMP]]*/ #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([current]) .ac-url-box {
+	visibility:collapse!important;
+	opacity:0 !important;
+	-moz-transform:translateX(-.65em) !important
+}
+#PopupAutoCompleteRichResult .autocomplete-richlistbox > scrollbox {
+	overflow:visible !important;
+}
+
+#PopupAutoCompleteRichResult {
+	padding:0 !important;
+	margin-top:-1px !Important;
+	border:1px solid hsla(0,0%,50%,.2) !important;
+	background:white padding-box!important;
+	-moz-appearance:none!important;
+	border-radius:2.15px;
+}
+#PopupAutoCompleteRichResult .autocomplete-richlistbox {
+	background:white -moz-linear-gradient(left,hsl(0,0%,97%) 27px,hsl(0,0%,90%) 28px,transparent 0) repeat-y !important;
+	background-size:28px auto!important;
+	margin:1px !important;
+}
+#PopupAutoCompleteRichResult * {
+	font:inherit !important;
+	font-family:"Segoe ui",sans-serif !important;
+	color:inherit !important;
+}
+#PopupAutoCompleteRichResult .ac-site-icon {
+	margin:0 10px 0 1px !important;
+}
+#PopupAutoCompleteRichResult .ac-title-box {
+	margin:0!important;
+	padding:0 !important;
+	color:black !important;
+}
+#PopupAutoCompleteRichResult  .autocomplete-richlistbox .autocomplete-richlistitem .ac-url-box {
+	margin:0 !important;
+	padding:1px 0 !important;
+	-moz-transition:opacity .21s linear 0.02s,-moz-transform .21s ease-out 0.02s !important;
+	color:hsl(0,0%,44%)!important;
+	font-size:95.5% !important;
+}
+#PopupAutoCompleteRichResult .ac-extra {
+	color:hsla(214,15%,44%,1) !important;
+}
+.autocomplete-richlistitem {
+	border:1px solid transparent !important;
+	border-bottom-color:transparent !important;
+	border-top:1px solid hsla(0,0%,97%,0) !important;
+	box-shadow:none !important;
+	padding:2px 4px !important;
+}
+.autocomplete-richlistitem:first-child {
+	border-top-color:transparent !important;
+}
+
+#PopupAutoCompleteRichResult .autocomplete-richlistitem{
+	padding-left:4px !important;
+}
+
+.autocomplete-richlistitem[type*="suggest"] {
+	background-color:rgba(0,0,0,.03) !important;
+}
+.autocomplete-richlistitem[actiontype="switchtab"] .ac-title .ac-normal-text.ac-comment:before {
+	content:"\a0Switch to tab:\a0";
+	color:hsla(0,0%,44%,1) !important;
+	background:hsla(214,35%,87%,.2) /*-moz-linear-gradient( hsla(214,55%,94%,.2) 0px,hsla(214,25%,80%,.2) 100%)*/ border-box !important;
+	box-shadow:inset hsla(214,50%,35%,.15) 0 0 0 1px,inset hsla(0,0%,100%,.2) 0 0 0 2px !important;
+	border-radius:2.1px !important;
+	-moz-margin-end:.4ex!important;
+	pointer-events:none;
+}
+.autocomplete-richlistitem[actiontype="switchtab"] .ac-url .ac-normal-text.ac-action-text {
+	visibility:collapse!important;
+}
+.autocomplete-richlistitem[actiontype="switchtab"] .ac-normal-text.ac-url-text {
+	visibility:visible!important;
+}
+
+span.ac-emphasize-text {
+	font-weight:normal !important;
+	background:hsla(60,91%,75%,0.8) /*-moz-linear-gradient(bottom,hsla(37,100%,55%,.15) 4px,hsla(40,100%,60%,.2) 0px,hsla(60,100%,80%,.07) 100%)*/ border-box !important;
+	text-decoration:none!important;
+	box-shadow:inset hsla(60,100%,35%,.2) 0 0 0 1px,inset hsla(0,0%,100%,.15) 0 0 0 2px !important;
+	border-radius:2.15px !important;
+}
+}
+.autocomplete-richlistitem[current] {border-color: hsla(210,/*[SAT]*/100%,43%,0) !important; background:  hsla(210,/*[SAT]*/100%,50%,.18 ) border-box !important;  box-shadow: inset hsla(210,/*[SAT]*/100%,91%,.5) 0 0 0 1px !important;}
+.autocomplete-richlistitem:active:hover {background-color:hsla(210,/*[SAT]*/100%,42%,.27)!important;box-shadow: inset hsla(210,/*[SAT]*/71%,84%,.5) 0 0 0 1px !important;}
+
+/*地址栏自动填补的高度*/
+#PopupAutoCompleteRichResult > .autocomplete-richlistbox > scrollbox {
+	display: block !important;
+}
+#PopupAutoCompleteRichResult > .autocomplete-richlistbox > scrollbox > box {
+	width:100% !Important;
+}
+
+
+
+
+/*=====================================PanelUI按钮调整================================*/
+#PanelUI-mainView .toolbarbutton-1{
+border:none !important;
+border-radius: 0px !important;
+}
+
+
+#PanelUI-mainView #ucjs_UserAgentChanger.toolbarbutton-1 {
+    padding: 0 !important;
+    background: none !important;
+}
+
+#PanelUI-mainView #ucjs_UserAgentChanger.toolbarbutton-1:hover  {
+    background-color: #e5e5e5 !important;
+}
+
+#PanelUI-mainView #userChromebtnMenu.toolbarbutton-1 {
+    padding: 0 !important;
+    background: none !important;
+
+}
+
+#PanelUI-mainView #userChromebtnMenu.toolbarbutton-1:hover {
+		background-color: #e5e5e5 !important;
+}
+
+
+/** Fixes the panel height **/  
+#PanelUI-popup .panelUI-grid.customization-target { max-height: 600px !important;}
+
+
+/** Shrinks the button box and font size **/
+#customization-panel-container .panel-arrowcontent :-moz-any(.toolbarbutton-1.chromeclass-toolbar-additional,.toolbarbutton-1),
+#PanelUI-popup :-moz-any(.toolbarbutton-1.chromeclass-toolbar-additional,.toolbarbutton-1),
+#PanelUI-popup toolbaritem[cui-areatype="menu-panel"][sdkstylewidget="true"]:not(.panel-wide-item) { 
+    font-size: 68% !important;
+    margin: 0.25em !important;
+    padding: 0em !important; 
+
+}
+/** Corrects font size from previous setting **/
+#customization-panel-container toolbarpaletteitem toolbarbutton:not(.panel-combined-button) :-moz-any(.toolbarbutton-text,.toolbarbutton-multiline-text),
+#PanelUI-contents toolbarbutton:not(.panel-combined-button) :-moz-any(.toolbarbutton-text,.toolbarbutton-multiline-text) {
+    margin:  0em -.2em -.5em -.2em !important;
+    font-size: 130% !important; 
+}
+
+#PanelUI-contents > toolbarbutton,
+#PanelUI-contents > toolbaritem:not(:-moz-any(#zoom-controls,#edit-controls))> toolbarbutton{
+    height:75px!important;
+		width: 62.9px!important;
+}
+
+
+
+
+
+
+
+
+
+/*================书签分栏调整==============*/
+/*http://bbs.kafan.cn/thread-1785448-1-1.html column bookmarks by kapoli*/
+/*文件夹1,2,3依自己的文件夹名称手动添加*/
+
+/*定义收藏项宽度一致*/
+.bookmark-item[container="true"]:-moz-any([label="实用工具"],[label="图形工具"],[label="资源素材"],[label="热门日常"]) .menuitem-with-favicon
+{max-width:175px !important;min-width:175px !important;}
+/*在这里定义单列的宽度，手动添加文件夹名称，或删除:-moz-any([label="文件夹1"],[label="文件夹2"],[label="文件夹3"]) 全局统一宽度，下面的双列三列或更多的显示依此宽度，按相应倍数计算*/
+
+
+/*双列显示项，手动添加label*/
+.bookmark-item[container="true"]:-moz-any(/*需要多列显示的书签文件夹名，多个用(,)分割，
+格式如下所示。下面的如此类推。跟第一个相同。
+在userchorme.css中，中文注意编码，
+改为UTF8，stylish扩展可无视*/
+[label="图形工具"],
+[label="资源素材"],
+[label="热门日常"]
+) >menupopup>hbox .scrollbox-innerbox{
+width:350px !important; /*双列显示350px ,>=175px*2 */
+display: table !important;
+}
+
+/*三列显示项，手动添加label*/
+.bookmark-item[container="true"]:-moz-any(
+[label="实用工具"],
+[label="2"]
+) >menupopup>hbox .scrollbox-innerbox{
+width:525px !important; /*三列显示525px，,>=175px*3 */
+display: table !important;
+}
+
+/*显示更多书签分栏----书签栏双箭头按钮*/
+.chevron >menupopup>hbox .scrollbox-innerbox{
+width:970px !important; 
+display: table !important;
+}
+.chevron .menuitem-with-favicon
+{max-width:1750px !important;min-width:175px !important;}
+.chevron .bookmark-item{max-width:175px !important;min-width:175px !important;}
+
+/*书签按钮*/
+#BMB_bookmarksPopup {min-width:990px !important;min-height: 700px !important;}
+#BMB_bookmarksPopup  .scrollbox-innerbox{
+display:table !important;
+}
+#BMB_bookmarksPopup .bookmark-item{max-width:320px !important;min-width:320px !important;}
+#BMB_bookmarksShowAllTop,#BMB_viewBookmarksToolbar,#BMB_bookmarksShowAll,#BMB_viewBookmarksSidebar,#BMB_subscribeToPageMenuitem,#BMB_unsortedBookmarks{max-width:320px !important;min-width:320px !important;}
+#BMB_bookmarksPopup .bookmark-item[container="true"] >menupopup>hbox .scrollbox-innerbox{max-width:330px !important;}
+/*这两项数值参照前面数值自定*/
+
+
+
+
+
+
+
+
+
+/*==============小书签图标更改==============*/
+/*.bookmark-item[label="书签名称"]>.menu-iconic-left,(这里是书签菜单)
+  .bookmark-item[label="书签名称"]>.toolbarbutton-icon (这里是书签工具栏) {
+	list-style-image:url("图标代码");
+	-moz-image-region:auto;
+	background-image:inherit !important;
+}
+*/
+.bookmark-item[label="谷歌翻译"]>.menu-iconic-left {
+	list-style-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABkElEQVQ4jaWTsWvCQBTGTwlI1/4Znfwn3LJXHBzEpVshkyBIxwbcnBSHgouDiItIgoN1EA6So3KCQxJLOJUSsjUOLl+HktOopS0efMM9+H7vvXv3yE1T4BqRm6bA7jOQMow+Wu0GwmCFMFjhY7PEdr0AuXAkoNVuoFLVUKlqKJYKKJYK8l6pahA+/xvg2HgM+hWw+wwwoxMUSwUwTiF8joenZzxSSN2/AqoZITsEbrt73Hb3hzeI+40zttoN6Fb4f4Bh9GXpp+axIzB2BFQzugzwXDvR+/0rpHQrlNPQrfAcwDiFojmY0QkMow/GqSxZNSOMHYGPzRKMU3iufQ5QNEdK+BzC58gOgezwG7JdL9CjDLoVwnNtqGaU/EjHAEVzsF0vJEC3QgifozZiUM0InmujR9nPAEIISeUHssx4rJ5rSzFOcffyfgCky1MomoN0eYp0eYpUfoBUfpDImOvMkevMURsxME5RG7Ek4NQcy3Nt5DrzxALN6AQzOjkACCHkEiRTf0Om/pYwx7E4Tq5d5y9KGJpYBpW+2AAAAABJRU5ErkJggg==");
+	-moz-image-region:auto;
+	background-image:inherit !important;
+}
+.bookmark-item[label="谷歌翻译 (新窗口)"]>.menu-iconic-left {
+	list-style-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABkElEQVQ4jaWTsWvCQBTGTwlI1/4Znfwn3LJXHBzEpVshkyBIxwbcnBSHgouDiItIgoN1EA6So3KCQxJLOJUSsjUOLl+HktOopS0efMM9+H7vvXv3yE1T4BqRm6bA7jOQMow+Wu0GwmCFMFjhY7PEdr0AuXAkoNVuoFLVUKlqKJYKKJYK8l6pahA+/xvg2HgM+hWw+wwwoxMUSwUwTiF8joenZzxSSN2/AqoZITsEbrt73Hb3hzeI+40zttoN6Fb4f4Bh9GXpp+axIzB2BFQzugzwXDvR+/0rpHQrlNPQrfAcwDiFojmY0QkMow/GqSxZNSOMHYGPzRKMU3iufQ5QNEdK+BzC58gOgezwG7JdL9CjDLoVwnNtqGaU/EjHAEVzsF0vJEC3QgifozZiUM0InmujR9nPAEIISeUHssx4rJ5rSzFOcffyfgCky1MomoN0eYp0eYpUfoBUfpDImOvMkevMURsxME5RG7Ek4NQcy3Nt5DrzxALN6AQzOjkACCHkEiRTf0Om/pYwx7E4Tq5d5y9KGJpYBpW+2AAAAABJRU5ErkJggg==");
+	-moz-image-region:auto;
+	background-image:inherit !important;
+}
+.bookmark-item[label="自动刷新"]>.menu-iconic-left {
+	list-style-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACaklEQVQ4jaXSUUhTURgH8LMWgdq2rnfe3d153dpW5jYsNvZgIkg9DOyt2EuBD1qwIKQkSIlqPbhy2Nq9czOG7VwMKY4URSNJ5rTWWkhYRLrbRH0phOrJh0px9/RSa9rYix98L4fv/M7H4Q8gIPF2GkBAYlBU/Dx9jM/pVnnRsMF9tHy79c6Z9s00Hwcl6j9geOmI/u6ygxsU2R+cqMP9Hwz4Snqf1PPC5gUAyMoCcPnwoeiiNcWL7EYox+DAPIv7Zo24Z7p+tWti/9GyG4SXrXR00TLJiYw0uMDgwBwj3Xiv+3U1Y5IuJhpmPY9MVPFFDIAMud3yAnBn0eLhcsx6MKuVQjntUlBkbva91Z/uTZlXLkwc4NwIyIsBBEBFsq7OWgAiC3tRMEv9DGW1o0GRakQYyN0I7OpOWHznxq2urau/ttvN02bz9QIwKDKPuU+aXu8boCwePH/bsIc/Zd50lmltNbxqbHyYZNnnBSAoajq9c2D31peSVuvBlN1+DdXWVngB2JlpaWl+abNNJ1g2P6nToQIQElkGIbd8KxA3Gjviev33hMPRlXQ4fM8Mhs9xhsFPaHo9TtNnSwap6Kd3jLHs0AOKwmM0vYZoOo8oCt+vqZHG1Oqpe5WV2rIAMhpVIxpNGpIkhiSJBZLEQnV1XiDJmVG12rEpB6WAsFbbEFGrv4QJAkcIAg8RBA4TxHhEoagHf1JZDpD5VSrTgEo15Vcqvw4oFGt+pVLyV1WNewGo/jtUACCEzlgs5hIE4QSE8KQgCJ0jEJ4Z7u+/FO3u5iPt7U/5tjYx0NS0EvZ4LsdiMReE0PkP2Eb/Bv65R2sKScmWAAAAAElFTkSuQmCC");
+	-moz-image-region:auto;
+	background-image:inherit !important;
+}
+.bookmark-item[label="宽度适配"]>.menu-iconic-left {
+	list-style-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA5klEQVQ4jbWTvwsBYRjHL2KVyaiURUabsln4ExT/g4XBv2IWSgmpKz+yYJJsBsWiy/1w7nDHe+/XYHMvJ5enPtvTp6fv05fj6iJc8e2iv+lSwO9NhDvyZ0GwJSE1PDKRTAvC1UJycHwvSI9VOI1BKApz7XcBAFQ3V3hYgkhXRmV1ZqLdKQilKC505xCjPXtY6xNBZqI6fyE7UXEwLNsi8wOvgvJSB6HPU0tLnUm8r9gF3oaI2tb4KsD8TGNfkJuecCH0dwFXF5HgFezOBHeLItZXmARa0ucQQ20JI+Hmrky+xh/a+I4HwH/p/NP5TmYAAAAASUVORK5CYII=");
+	-moz-image-region:auto;
+	background-image:inherit !important;
+}
+.bookmark-item[label="网页水平分屏"]>.menu-iconic-left {
+	list-style-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALElEQVQ4jWMIKDjwnxLMMGoAlQwILCQPBxQc+M/wn0JAuQEUe2FwxMIINwAAdAau97dfnugAAAAASUVORK5CYII=");
+	-moz-image-region:auto;
+	background-image:inherit !important;
+}
+.bookmark-item[label="网页垂直分屏"]>.menu-iconic-left {
+	list-style-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAKklEQVQ4jWMIKDjwHxeGAXxqGHBJBBYiDAgsHDVg1IBRAwbOgIAC4rIzAHQGrvcrP3+NAAAAAElFTkSuQmCC");
+	-moz-image-region:auto;
+	background-image:inherit !important;
+}
+.bookmark-item[label="繁体转简体"]>.menu-iconic-left {
+	list-style-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA1UlEQVQ4jaWTwQ2EIBRELWLqoAISb1RB4o27HXDxQAl7oQBrsAMrsAWbmD0ICquwbPbwQ0z+f3+Ywe617fynuqZGbwiAwq4tgJVagpCOkzeEdNQDCMQyHMuAMAwQg6ECKKyjQgoAlX8EJMOf2xZHgaCqdoXJ9gR66iX9Lm8vmpgOnsYVVJRNTDdLx2mbDy+qgBAXpKGSx/ao5jKzlkKQKex8U9EGCDJjcxqh8nO7AuV3jrfHEwFXSkUPsqhO9/vjrAK2lVrmDRnkuwe1iv7kP9QPgOd6A4w7rrRBfOTMAAAAAElFTkSuQmCC");
+	-moz-image-region:auto;
+	background-image:inherit !important;
+}
+.bookmark-item[label="有道翻译"]>.menu-iconic-left {
+	list-style-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADc0lEQVQ4jSXDaU+aBwDA8efb7O2SfYEle7slZsuWdodZ1zWmXrG2igLiVXuIzKPT1lm3tVov1NZrdQKdClqPVQoigjwc8nAqIAJaPOC/F/slP+HwNI8v/gHRKxGLxQnHj0keZ0jHDxH3w4TSOSLpi/+f5Il+gNDxOeH0BeH0JYInkcXplvCFDnEGk1j8CXTOOGbpmGg4yl7gEO/RJf7kBc5gAps3QjAD/kQWKXmOsLntwCV6sPkTiNEUOmeMgc0IPcsBNjwJxD0RMZomlj4jdBBHrzPwzhnAkwJH9BTBbrOyavPx2hJgYE3iF72XToOPjn88/GoK4hQ9hPx+8vkciWQaj09i6MUQbywitqM8gtNqZmJpB6XWSsO4laY5B21LXjrW92lZkbD7Arh27QBkTk4JRJOYrXY06jZ0ZjfC+tu3zCxbKexaoWpwi0a9i35LhEl7lD4xyablPS6Hk1wecrkc8UQSm0ti6rWBa1e/Qega17G+ukbTiJnPWxeRzTuYdcQwhTIsHZwyN/0X8fgR2ew5l5c5RK/E4pZI92/PKK+uQ6jXuVH2DKAdnaBzbge5SWJQOsUQPmNisIeNsWbS2RypVIZQ+ADt3CIjs0YKCr6iUe9CqNZ7ua93cLe5hRalHE17O3cfttFe/AXL6k/wPv4Y6xstLinG0NgrOv6YpuK2ki/LFTS/O0aoWnAzsbJDJBzBaFpBOzLKs+Ep+htusHfvI9y9n2LTXGXbskNbVx+a3pdc+fYapc/1qBb9CD/XtdI/PI3TGyBzckIwGmNXlJhdes/Mve8Iaj7DXVzA0vAYKnUv9ff7+PrHm8gXXMgNHoQbbb9T3/wQ45aD6MEh4YM4TpeXdfMuw9qXvJJfYfJWCUOjU8gaOrld08oPdxqoWztEsbiPoHqXori2iYmpeXbFfXadIrMLRoYm/+bJwAwtXc+RP+hGplJT2/KUkvImCpVqVFtp5MYgQpM9T3G3lja1BsOGHe38GkNTRp6+mKbryTCaR4M8eDRMvXqQSnknhd9fp+LPeZQbRyiMQQTleoIag5uyShkdnY9Ryuspu1VNUWUNRVV1FN1RUlIho7Sslus3K5BpTag2kyhMYZSrEQSFQaRuK01pSxc/lVZSNbmBaiVE83aWRts5jdtnqExBqvrGUS3to/w3hdwYRLkSQbF6wH+1OywHUiMNIwAAAABJRU5ErkJggg==");
+	-moz-image-region:auto;
+	background-image:inherit !important;
+}
+.bookmark-item[label="解除网页限制"]>.menu-iconic-left {
+	list-style-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAYAAADtc08vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKuSURBVDhPVVNLSFRRGL6gIorixieI4mMhIpSajjPqzNy5M82M87j3zujoYrSNECIyE6KYYjQ1tRMfaVAbQYiwoHZBaS1cRA8qqKhRwVQCqaBW5fLrO9cHuvhmzj3/933n///zHykQCOAkwroOn88Hk8WCs42NONPQgCaTCR6vF+FQCMET3GAwiGMDEVBVFbLTaXxfHh7G7elp3JmZweTYGHRNg01RDJHAKYNjscuFRDyOndVVYH39AKkUsLmJn2trmJ2YgIOcgDA5aaBRbOfJt4aGgJUV/FtexqPRUSR6e5Ho68MiTX8sLRmx++PjRpbiQKGVNLo4WXOMG3/n57GbSGCABLPNBsXtRr0sI8rUd5JJ/Jmbw/7CAq53d0NmT3RqJJ1Nc1DwLBrF/sgIxim0eDyIcF+mcZzEPfbjN3GP6X+PxfChvx9ummrkSB52NmS3Y4PktzzNTYMQA3ZmdomC3Z4e/CJnqrUVDWYznra3Y48nX7Ba4RIGzq4u9LS04HNGBh5mZ8PV0QF7OIxYbS1SJSXYLi5GsqoKNmaiUHA3Lw9bmZm4yCt2dHYyA/7obW14LUl4kZ4OM9OP19XhI7+/EFdoYPX7EeY1ipIe5OQY+700OM/DJY0Bhe6Ps7LwiYHZwkK8439KiMvKYGe6nSxHYVbR5maD8zwtDV72QBUlaHR3ssZYTQ2+MigI74nB6mqcY3YeCq2Mq+zNE5a4zdhVGssU69QezAFPcPBjpqAAGyS8IW6SNFhfjwGO8o3KSrxkeTvcX8zNhZPXGzyag6NJFBsKG3ittBSvSBTkb8QWsUuIsqaKiuDizfjJPTWJR6MppstB6HxIYxUVmGZGs/n5mCwvR4QPSiYvcCg2dITkZ+rG4xDgRojwse7WSARN7EET1xauvVyLmCE+5Kqqiv8c/ONMxvueZQAAAABJRU5ErkJggg==");
+	-moz-image-region:auto;
+	background-image:inherit !important;
+}
+.bookmark-item[label="明文显示密码"]>.menu-iconic-left {
+	list-style-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADRElEQVQ4jW3Tf0zUdRzH8Y9QkUHLOW9KYEmtGkziPMexDicMuB/Q0TFg2MQK2gkRP+JEQjhyJr8Kji/I7zhghLBkghvS6cFUfhxwcXLFFvpPK4iTWLM/+0NW7dkftwJX7+315+vxx2t7C3X9ZEy8ZWYxt64PveUWGsnxv1E3TJF8yUFK2wKJzXPEW2YW1fWTMSLBMr3Z3VTN2vkIhk1xaKXZf0sZHfPIM84gC1PxbGAI+4JfQhb4ArFqLeUDtzk77N4UGsnBNXMKK4VBTBSEo5EcaCUHxYMuDsmjEUI8lmOh+8mtbya5ppuMum6ERnJgaLCTYniLTGmcU1YXlpvLpGVloZUJSo4KqmOexvKmjK7UA/S2f8JHc79gmlzhw+t3vYBGchD5fhX5fQ4sN5dI77FT+2Uf9p6PGb3aSf9wHy2D/Vzs7KLA0kG+ZKWwyUpRc+828LZkI+ezTnJGnZTZlzFarOiyC4nUGHg5XIHsQBDyqGiSUtKRyWQE+D3JHv/d20DxoIuTHSMUX53myBvH0CTq0adlIHb5IITgOdl+XMvf8+iPP+m/MoKv327vLv8A58fuYbK5OXQkisOvy/n90RYAn7d2Inx8USXo2HkZWUYvoG6cJb5hhrKBWd7ttSF8nyI7J4/fHj5kdXWVv4CjquOEK1UsLC6SlpoKwNDomBeIqryB0mzjvdoh0lqG2RvyGrFqLaXnKjiVmQnA6fwi/J4JwDowRE11NQA9l7/yAkqzDaXZhrZmkqrriyR92o4QgtN5BWx41tna2iI6Ng4hBK+EHmbi1h1u35kiLELBnsCD24DSbMN0+S5VC6skVDQSoT9BZYuV7DPl7A15lefD5BxUqIgwZBKbV05yVQe5Y0uPA0qzjbNDS7S5PFTM/4xxzE32iJOiiXuUzPxE6fw6JY41yhY8SN/9SvP0j/8FlGYbxy/Yye9zUnfjPm1ODy0uD63frNPuXOPS1A9UXnGS1ziCIceMUFaMP9hZTmya4YP+OYq7xiltGsBYWEbSCSP6k7no0rOJM7zDi6EKdvk8gRDigVCUXtNFnvt6M/qCnSLbfWrdHmq/3eCie4PKqRVMrV8QH7qPAH9/goKDdz7Wpr8Qur8B/c1d/jmhRwsAAAAASUVORK5CYII=");
+	-moz-image-region:auto;
+	background-image:inherit !important;
+}
+.bookmark-item[label="百度站内搜索"]>.menu-iconic-left,.bookmark-item[label="百度搜藏快照"]>.menu-iconic-left {
+	list-style-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACWklEQVQ4jZ2TzUuUURTGf2dmnFHLpCh1kSa0yV2k1iZokRURRNAiSrDAlZFhSUQgRBYGRX+BEFQEISJBENW2hRUlgaLpjBPqaI7mt+i877z3nhbjfKi7Dlw4zzn3Hp77nHOEh4MKgFVQCxYwJoWNBWtT2Ev7Odh4BAC0rYr/Man/iA+r2xLhEUc72md1oD+hAJGwo9GIu/2i8fBh7aaY6yrPO5fk1ctlnj6eJxpxaWyYprkpTjTibilgNzNYXDAEg4I1sLvIL/lBkfk5Q2LdijEq83NmcwHPEMCkGIyPJXnQNqv5BT7qzhTK4rzhcHWImmMFXGsszryZGE9SXpGXYQB3+1RVtev1oh4oGbHHa39bVdXRsKOJdatpGw07evliTC9dmLB/ppKqqsrZLs1oUHkwSHlFnpSUBuT9u1UAbt2Y5nbzNNGIS0/3CtFRlx/fEhIbT2603hLApv51pKaAljt7dCbucagqKC3X4/pryCGU75OZuNH2jn3ypXeNsrKA7i3x52jgpRj4/XDu/E6Zinm0NscZHnIwHrK2aun9vC73Wmf0ybNSiU0kqawMSrYLXlbZ0XCSm01xBgdcPA/JFXx4yJVH9/+yvyJPMhlj8KW7oAo9b5a1/6ejyeT2mVlYsPr9a4KJsZyktQQwWQZ5IcFxFL8f1KLWKj6/iN+HKrC2Zpma9HIGSbMaiMCVq8UyGfMYGXbZVeSTE3WFALztXpGlRUt1bYiTp3dILgOh4ZPqi1PpkAJ9wJaZzVgQqE4DOdqJUP9B8bzsmhq7saobvjXgaWqVM0cz6/8PC5Bp7zdzt94AAAAASUVORK5CYII=");
+	-moz-image-region:auto;
+	background-image:inherit !important;
+}
+.bookmark-item[label="Google云输入法"]>.menu-iconic-left,.bookmark-item[label="谷歌相似网页搜索"]>.menu-iconic-left,.bookmark-item[label="谷歌网页快照"]>.menu-iconic-left,.bookmark-item[label="谷歌短网址"]>.menu-iconic-left,.bookmark-item[label="谷歌站内搜索"]>.menu-iconic-left {
+	list-style-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABWUlEQVQ4jaXTPUvDQBgH8HyzkiCVdlBcFD+CDgUn0bU5rUMRS6mD4BuCVgfFKmitCl0s+FKhvoEgVvsyWKuRS9JLcvm7tcplSHW44e6e5/c8x91JAaKFZJXWFELRzZBVWgsQLST9JfknInlt9ExRJLMMqSOG67ID7gLb5xbG100h1hNIFyzM51gbu61wnN7Znl14Al+GC7LTas9nMi20bPgHPnUXmatOxbE1E89v3D8wd8DAbGBiw0R/XMfupY3RJcM/oBCKkUUDiUMGF/h1HN+AQiiC0xSa4aL04mBgVvcPTKZNbBYspHIMy3mGJnXx+s4xmBARAVg4Ybh4ctAb66wNJXSUGxx7RfEqBaDa5EgdMSEwmWXIlnwA+Qcb5QbHcLLTbjBGcfboILLq4yX2xXVsFSzUP1zcVzmOb2zsF21EVsRkhVD89zPVJTmqhWWV1rsGVFqRo1r4G6iM33AbQTj+AAAAAElFTkSuQmCC");
+	-moz-image-region:auto;
+	background-image:inherit !important;
+} 
+ 
+ 

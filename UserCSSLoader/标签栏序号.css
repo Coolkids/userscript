@@ -1,0 +1,18 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@-moz-document url("chrome://browser/content/browser.xul"),
+               url("chrome://global/content/viewSource.xul") {
+    .tabbrowser-tab:before{
+        margin: 0px -10px -10px 0px !important;
+        padding: 0px 3px !important;
+        border-radius: 7px !important;
+        background-color: rgba(0,0,0,0.5) !important;
+        color: #fff !important;
+        font-size: 7px !important;
+        font-weight: 700 !important;
+        content: counter(tabs) !important;
+        position: absolute !important;
+    }
+    tab{
+        counter-increment: counter !important;
+    }
+}

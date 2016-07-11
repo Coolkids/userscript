@@ -1,0 +1,25 @@
+/*@name        Global Yahei
+  @namespace   http://www.runningcheese.com/firefox-v6
+  @description 全局雅黑字体
+  @author      runningcheese
+  @version     1.00
+  @reference   none
+*/
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+/*=========全局网页字体设置========*/
+@-moz-document regexp("((?!wenku.baidu).)*"){
+/*中文字体 */
+    @font-face { font-family: 'Simsun'; src: local('Microsoft YaHei UI')}
+    @font-face { font-family: 'SimSun-ExtB'; src: local('Microsoft YaHei UI')}
+    @font-face { font-family: 'Microsoft JhengHei'; src: local('Microsoft YaHei UI')}
+    @font-face { font-family: 'NSimSun'; src: local('Microsoft YaHei UI')}
+    @font-face { font-family: 'FZSongS'; src: local('Microsoft YaHei UI')}
+    @font-face { font-family: '宋体'; src: local('Microsoft YaHei UI')}
+    @font-face { font-family: '新宋体'; src: local('Microsoft YaHei UI')}
+    @font-face { font-family: '黑体'; src: local('Microsoft YaHei UI')}
+    @font-face { font-family: '仿宋'; src: local('Microsoft YaHei UI')}
+}
+
+/*输入框字体*/
+.textbox-input-box,.searchbar-textbox
+ {font-family:Tahoma,Microsoft Yahei, Arial,Helvetica, sans-serif !important;}

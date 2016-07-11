@@ -1,0 +1,6 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("www.baidu.com") {
+  #head{position: relative !important;}
+	#s_tab{padding: 0px 0px 0px 138px !important;}
+}
