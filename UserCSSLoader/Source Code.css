@@ -1,0 +1,50 @@
+/*@name        Monokai View Source
+  @namespace   http://www.runningcheese.com/firefox-v6
+  @description 更改查看源代码时的样式
+  @author      Psilioxus
+  @modifier    runningcheese
+  @version     1.00
+  @reference   替换成Monokai配色 https://userstyles.org/styles/117089 by @Psilioxus                
+*/
+
+
+@charset "utf-8";
+@-moz-document url-prefix(view-source:){
+
+*|*:root {
+	background: #272822 !important;
+}
+*::-moz-selection {
+	background-color:#49483E;
+}
+body {
+	font: 12px Monaco, -moz-fixed !important;
+	margin: 0;
+	padding: 0.6em 1em;
+	color: #FCFFE0 !important;
+}
+.doctype, .start-tag, .end-tag {
+color: #06cfcf !important;
+}
+.attribute-name {
+color: #a0a0f0 !important;
+font-weight: normal !important;
+}
+.attribute-value {
+color: white !important;
+}
+.comment, .cdata, .pi {
+color: green !important;
+}
+.error, .error > .start-tag, .error > .end-tag,
+.error > .comment, .error > .cdata, .error > .doctype,
+.error > .pi, .error > .entity, .error > .attribute-name,
+.error > .attribute-value {
+color: red !important;
+background: #fff !important;
+font-weight: bold !important;
+}
+a:link {
+color: #8fa3ff !important;
+}
+}

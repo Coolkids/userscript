@@ -1,0 +1,12 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document url-prefix(http://pan.baidu.com/s/), url-prefix(http://pan.baidu.com/share/) {
+  h2 {
+		width:100% !important;
+		padding-bottom: 8px !important;
+		padding-top: 8px !important;
+	}
+	.slide-show-header{
+		display:inline !important;
+	}
+}

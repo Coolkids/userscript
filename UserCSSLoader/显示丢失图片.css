@@ -1,0 +1,6 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+@-moz-document url-prefix(http), url-prefix(https), url-prefix(file) {
+  /*ÏÔÊ¾¶ªÊ§Í¼Æ¬*/
+  img{font: 12px Arial!important;}
+  img:-moz-broken{-moz-force-broken-image-icon: 1 !important; width: 48px; height: 24px;}
+}
