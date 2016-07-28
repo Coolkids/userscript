@@ -743,6 +743,9 @@
 								let menuitem = menupopup.appendChild(document.createElement("menuitem"));
 								menuitem.value = dialog.mLauncher.suggestedFileName;
 								menuitem.label = "Original: " + menuitem.value;
+								let menuitem2 = menupopup.appendChild(document.createElement("menuitem"));
+								menuitem2.value = decodeURIComponent(dialog.mLauncher.suggestedFileName);
+								menuitem2.label = "URI: " + menuitem2.value;
 								if (!enable)
 									locationtext.value = menuitem.value;
 								let converter = Components.classes['@mozilla.org/intl/scriptableunicodeconverter']
