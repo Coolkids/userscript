@@ -48,42 +48,35 @@ regex: true
 //Google服務轉國內鏡像
 //參考https://github.com/jiacai2050/gooreplacer
 {
-name: "ajax/fonts >> 360 useso",
+name: "http ajax/fonts >> 科大反代",
 from: /^http:\/\/(ajax|fonts)\.googleapis\.com\/(.*)$/,
-to: "http://$1.useso.com/$2",
+to: "http://$1.proxy.ustclug.org/$2",
 regex: true
 },
-/*{
+{
 //https://servers.ustclug.org/index.php/2014/06/blog-googlefonts-speedup/
-name: "ajax/fonts >> 科大博客提供",
+name: "https ajax/fonts >> 科大反代",
 from: /^https:\/\/(ajax|fonts)\.googleapis\.com\/(.*)$/,
-to: "http://$1.lug.ustc.edu.cn/$2",
+to: "https://$1.proxy.ustclug.org/$2",
 regex: true
 },
 {
-name: "themes >> 科大博客",
+name: "themes >> 科大反代",
 from: /^https?:\/\/themes\.googleusercontent\.com\/(.*)$/,
-to: "http://google-themes.lug.ustc.edu.cn/$1",
+to: "https://google-themes.proxy.ustclug.org/$1",
 regex: true
 },
 {
-name: "fonts-gstatic >> 科大博客",
+name: "fonts-gstatic >> 科大反代",
 from: /^https?:\/\/fonts\.gstatic\.com\/(.*)$/,
-to: "http://fonts-gstatic.lug.ustc.edu.cn/$1",
+to: "https://fonts-gstatic.proxy.ustclug.org/$1",
 regex: true
-},*/
+},
 {
 //新浪到百度JS库
 name: "sina > baidu JS Libs",
 from: "http://lib.sinaapp.com/js/jquery/*/*",
 to: "http://libs.baidu.com/jquery/$1/$2",
-wildcard: true
-},
-{
-//轻之文库新地址
-name: "lknovel > linovel",
-from: "http://lknovel.lightnovel.cn/*",
-to: "http://www.linovel.com/$1",
 wildcard: true
 },
 ];
