@@ -3743,7 +3743,7 @@ location == "chrome://browser/content/browser.xul" && (function(CSS) {
     padding:0 0 0 3px !important;\
 }\
 #FeiRuoNet_icon.Proxy {\
-    filter: grayscale(50%) blur(.2px);\
+    //filter: grayscale(50%) blur(.2px);\
 }\
 #FeiRuoNet_icon.Error {\
     filter: grayscale(50%) blur(.2px);\
