@@ -3703,7 +3703,8 @@ location == "chrome://browser/content/browser.xul" && (function(CSS) {
     try{
 		FeiRuoNet.Initialization();
 	}catch(err_coolkid){
-		console.log(err_coolkid);
+		alert(err_coolkid);
+		console.error(err_coolkid);
 	}
 })('\
 #urlbar.FeiRuoNetSSLhigh,\

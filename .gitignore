@@ -1,3 +1,4 @@
 *.json
 *.bak
 *.json
+!lib/ShowIP.exe

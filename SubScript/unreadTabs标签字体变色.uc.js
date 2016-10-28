@@ -208,8 +208,8 @@ var unreadTabs = {
 
   // タブの状態をセッションデータに保存
   saveUnreadForTab: function (aTab){
-    if (aTab.hasAttribute("unreadTab"))
-      this.ss.setTabValue(aTab, "unreadTab", true);
+    if (aTab.hasAttribute("unreadTab")=="true")
+      this.ss.setTabValue(aTab, "unreadTab", "true");
     else {
       //try {
         this.checkCachedSessionDataExpiration(aTab);
@@ -471,7 +471,13 @@ unreadTabsEventListener.prototype = {
     }
 
     // バイナリのハッシュデータを 16 進数文字列に変換する。
-    return [toHexString(hash.charCodeAt(i)) for (i in hash)].join("");
+    var array = [];
+    var index=0;
+    for (i in hash){
+	    array[index]=toHexString(hash.charCodeAt(i));
+	    index++;
+    }
+    return array.join("");
   }
 
 
