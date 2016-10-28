@@ -3700,7 +3700,11 @@ location == "chrome://browser/content/browser.xul" && (function(CSS) {
         return el;
     }
     window.FeiRuoNet = FeiRuoNet;
-    FeiRuoNet.Initialization();
+    try{
+		FeiRuoNet.Initialization();
+	}catch(err_coolkid){
+		console.log(err_coolkid);
+	}
 })('\
 #urlbar.FeiRuoNetSSLhigh,\
 #urlbar.FeiRuoNetSSLhigh > .autocomplete-textbox-container {\
