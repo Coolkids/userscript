@@ -18,7 +18,7 @@
     function RedirectorUI() {
         this.rules = "local/_redirector.js".split("/"); // 规则文件路径
         this.addIcon = true;                            // 是否添加按钮/菜单
-        this.iconStyle = 1;                             // 0 按钮，1 菜单
+        this.iconStyle = 0;                             // 0 按钮，1 菜单
         this.state = true;                              // 是否启用脚本
         this.enableIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAeUlEQVQ4je2SQQqAMAwEPfUzeYLOvs/e9KH1Ca2XCrZEKHgSDOQ2GZIlk5kFSTuQgCRpN7MwdfXISdokla7XXvDIVVtZajlQ03cOSI0AmEcEFwckdzUgjpwAxHs4GcgDIfrcZe0HnU187sOC1yH+n9h84gEcAyE23AmfDQAU98LFlwAAAABJRU5ErkJggg==";
         this.disableIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAyUlEQVQ4jdWSwQ2FIBBEPdkMJegsNwsw7Nb0vWlxlvDxBA2Y4L+gUcTI9W8yCYfHwE6mUkrVRDQBcAAcEU1KqbpK5pEjopGItkSf1OCRi25bGycDXXTmALiLAYCmxGDnALjs1wAMJSsAGM7hBADhLcRO67XTer1xu2t6MZ1FZFtE7twfG5SGODPX1phpYQ4Lc7DGTDNzeRMt87i/fsiYfBM7rdcbHGWZW8vcxnO+iW8G375vDoPSJmZXELk00QPwbyFaEW9F/B7iD60oLMm8clpxAAAAAElFTkSuQmCC";
