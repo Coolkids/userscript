@@ -1,0 +1,270 @@
+{
+    "title": "Referrer Control 规则文件",
+    "date": "2014-10-10 00:08:13",
+    "rules": [
+        {
+            "source": "",
+            "target": "http://*douban.com/*",
+            "value": "http://www.douban.com",
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*yyets.com/*",
+            "value": "http://www.yyets.com/",
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://img.cnbeta.com/*",
+            "value": 4,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*hiphotos.baidu.com/*",
+            "value": 4,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*hiphotos.bdimg.com/*",
+            "value": 4,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://imgsrc.baidu.com/*",
+            "value": 4,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*baidu-img.cn/*",
+            "value": "http://www.baidu.com/",
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*photo.sina.com.cn/*",
+            "value": 1,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*sinaimg.cn/*",
+            "value": "http://blog.sina.com.cn/",
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*pixiv.net/*",
+            "value": 4,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://img.ph.126.net/*",
+            "value": 4,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*isnowfy.com/*",
+            "value": 4,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://image.itmedia.co.jp/*",
+            "value": 4,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*2ch.net/*",
+            "value": 4,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://imepita.jp/*",
+            "value": 2,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*tumblr.com/*",
+            "value": 4,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*photo.store.qq.com/*",
+            "value": 4,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://img*.pconline.com.cn/*",
+            "value": 4,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*fc2.com/*",
+            "value": 1,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*blogs.yahoo.co.jp/*",
+            "value": 1,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*hentaiverse.net/*",
+            "value": 1,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*qlogo.cn/*",
+            "value": 1,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*qpic.cn/*",
+            "value": 1,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://fmn.rrfmn.com/*",
+            "value": 1,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*postimage.org/*",
+            "value": 4,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*bdstatic.com/*",
+            "value": "http://tieba.baidu.com/",
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://space.wenxuecity.com/*",
+            "value": "http://bbs.wenxuecity.com/",
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://www.autoimg.cn/*",
+            "value": "http://club.autohome.com.cn/",
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*kkkmh.com/*",
+            "value": "http://www.kkkmh.com/",
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://nonie.1ting.com/*",
+            "value": "http://www.1ting.com/",
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://img.knb.im/*",
+            "value": "http://www.kenengba.com/",
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*tianya.cn/*",
+            "value": "http://bbs.tianya.cn/",
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*xici.net/*",
+            "value": "http://www.xici.net/",
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://media.chinagate.com/*",
+            "value": "http://www.wenxuecity.com/",
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*tankr.net/*",
+            "value": "http://jandan.net/",
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*sankakustatic.com/*",
+            "value": "http://chan.sankakucomplex.com/",
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*zol.com.cn/*",
+            "value": 1,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*imgbox.com/*",
+            "value": 1,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://img.liufen.com/*",
+            "value": "http://www.liufen.com.cn/",
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://pic.wenwen.soso.com/*",
+            "value": 1,
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://img*.laibafile.cn/*",
+            "value": "http://bbs.tianya.cn/",
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://images*.51.com/*",
+            "value": "http://www.51.com/",
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://*images*.51img1.com/*",
+            "value": "http://mm.51.com/",
+            "comment": ""
+        },
+        {
+            "source": "",
+            "target": "http://image.tmoke.com/*",
+            "value": 1,
+            "comment": ""
+        }
+    ]
+}
