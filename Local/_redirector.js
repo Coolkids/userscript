@@ -10,7 +10,7 @@ resp: false // 可选，true 表示替换 response body
 //Google服務轉國內鏡像
 //Google服務轉國內鏡像
 //參考https://github.com/jiacai2050/gooreplacer
-{
+/*{
 //https://servers.ustclug.org/index.php/2014/06/blog-googlefonts-speedup/
 name: "ajax/fonts >> 科大反代",
 from: /^(http|https):\/\/(ajax|fonts)\.googleapis\.com\/(.*)$/,
@@ -34,5 +34,5 @@ name: "gravatar >> 科大反代",
 from: /^(http|https):\/\/secure\.gravatar\.com\/(.*)$/,
 to: "$1://gravatar.proxy.ustclug.org/$2",
 regex: true
-},
+},*/
 ];
