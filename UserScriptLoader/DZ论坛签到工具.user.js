@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name       DZ论坛签到工具
-// @version    0.2.2
+// @version    0.2.3
 // @description  自动签到工具
 // @include      http://*/plugin.php?id=dsu_paulsign*
 // @include      http://bbs.kafan.cn/*
-// @include      http://www.tsdm.net/*
+// @include      http://www.tsdm.me/*
 // @include      htt*://www.lightnovel.cn/home.php?mod=task
 // @include      http://www.mddmm.com/dsu_paulsign-sign.html
 // @require      http://code.jquery.com/jquery-2.1.1.min.js
