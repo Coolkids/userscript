@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       DZ论坛签到工具
-// @version    0.2.3
+// @version    0.2.4
 // @description  自动签到工具
 // @include      http://*/plugin.php?id=dsu_paulsign*
 // @include      http://bbs.kafan.cn/*
@@ -57,17 +57,17 @@ function qd2(){
 }
 
 
-if(isURL("http://www.tsdm.net/")){
+if(isURL("tsdm")){
 	//天使论坛
 	qd();
     if(window.find("签到领奖")&&(window.location.href!="http://www.tsdm.net/plugin.php?id=dsu_paulsign:sign")){
         window.location.href="http://www.tsdm.net/plugin.php?id=dsu_paulsign:sign";
         return;
     }
-}else if(isURL("bbs.kafan.cn")){
+}else if(isURL("kafan")){
 	//卡饭论坛
 	qd2();
-}else if(isURL("www.lightnovel.cn/home.php?mod=task")){
+}else if(isURL("lightnovel")){
 	//轻国
 	if(window.find("每日任务")&&window.find("啪啪啪")){
 		window.location.href="http://www.lightnovel.cn/home.php?mod=task&do=apply&id=98";
