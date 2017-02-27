@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       cnbeta 工具
-// @version    0.0.2.1
+// @version    0.0.3
 // @description  cnbeta 工具
 // @include      http://*.cnbeta.com/*
 // @include      https://*.cnbeta.com/*
