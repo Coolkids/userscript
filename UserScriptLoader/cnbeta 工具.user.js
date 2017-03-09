@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       cnbeta 工具
-// @version    0.0.3
+// @version    0.0.5
 // @description  cnbeta 工具
 // @include      http://*.cnbeta.com/*
 // @include      https://*.cnbeta.com/*
@@ -20,13 +20,15 @@
     };
     var b = function(){
         var img = $("img[original]");
-        //console.log(img.length);
         img.each(function(){
-            if($(this).attr("src")!=$(this).attr("original")){
-                $(this).attr("src", $(this).attr("original"));
+            var newimg = $(this).attr("original");
+            var oldimg = $(this).attr("src");
+            if(oldimg!=newimg&&newimg!=null){
+	            console.log($(this).attr("src")+"替换为"+$(this).attr("original"));
+                $(this).attr("src", newimg);
             }
         });
     };
     a();
-    setTimeout(b, 500);
+    setTimeout(b, 1000);
 }).apply(unsafeWindow);
