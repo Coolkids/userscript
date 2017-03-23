@@ -24,7 +24,7 @@
             var newimg = $(this).attr("original");
             var oldimg = $(this).attr("src");
             if(oldimg!=newimg&&newimg!=null){
-	            console.log($(this).attr("src")+"替换为"+$(this).attr("original"));
+                console.log($(this).attr("src")+"替换为"+$(this).attr("original"));
                 $(this).attr("src", newimg);
             }
         });
