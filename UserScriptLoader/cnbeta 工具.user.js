@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       cnbeta 工具
-// @version    0.0.7
+// @version    0.0.8
 // @description  cnbeta 工具
 // @include      http://*.cnbeta.com/*
 // @include      https://*.cnbeta.com/*
@@ -42,5 +42,5 @@
             }
         });
     };
-    setTimeout(c, 1000);
+    //setTimeout(c, 1000);
 }).apply(unsafeWindow);
