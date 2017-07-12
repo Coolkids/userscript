@@ -9,7 +9,7 @@
 // @include      http://www.mddmm.com/dsu_paulsign-sign.html
 // @require      http://code.jquery.com/jquery-2.1.1.min.js
 // @grant        unsafeWindow
-// @copyright  2013+, Coolkid
+// @copyright  2017+, Coolkid
 // ==/UserScript==
 
 function isURL(x){
