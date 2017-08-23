@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       DZ论坛签到工具
-// @version    0.2.5
+// @version    0.2.6
 // @description  自动签到工具
 // @include      http://*/plugin.php?id=dsu_paulsign*
 // @include      http://bbs.kafan.cn/*
