@@ -61,7 +61,7 @@ if(isURL("tsdm")){
 	//天使论坛
 	qd();
     if(window.find("签到领奖")&&(window.location.href!="http://www.tsdm.me/plugin.php?id=dsu_paulsign:sign")){
-        window.location.href="http://www.tsdm.net/plugin.php?id=dsu_paulsign:sign";
+        window.location.href="http://www.tsdm.me/plugin.php?id=dsu_paulsign:sign";
         return;
     }
 }else if(isURL("kafan")){
