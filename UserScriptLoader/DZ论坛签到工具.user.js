@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       DZ论坛签到工具
-// @version    0.2.5
+// @version    0.2.6
 // @description  自动签到工具
 // @include      http://*/plugin.php?id=dsu_paulsign*
 // @include      http://bbs.kafan.cn/*
@@ -61,7 +61,7 @@ if(isURL("tsdm")){
 	//天使论坛
 	qd();
     if(window.find("签到领奖")&&(window.location.href!="http://www.tsdm.me/plugin.php?id=dsu_paulsign:sign")){
-        window.location.href="http://www.tsdm.net/plugin.php?id=dsu_paulsign:sign";
+        window.location.href="http://www.tsdm.me/plugin.php?id=dsu_paulsign:sign";
         return;
     }
 }else if(isURL("kafan")){
