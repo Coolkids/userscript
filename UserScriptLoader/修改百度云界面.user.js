@@ -1,10 +1,8 @@
 // ==UserScript==
 // @name         修改百度云界面
-// @version      0.0.1
+// @version      0.0.2
 // @description  修改百度云界面!
 // @author       Coolkid
-// @match        *://pan.baidu.com/disk/home*
-// @match        *://yun.baidu.com/disk/home*
 // @match        *://pan.baidu.com/s/*
 // @match        *://yun.baidu.com/s/*
 // @match        *://pan.baidu.com/share/link*
