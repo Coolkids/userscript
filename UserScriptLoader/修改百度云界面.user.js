@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         修改百度云界面
-// @version      0.0.3
+// @version      0.0.4
 // @description  修改百度云界面!
 // @author       Coolkid
 // @match        *://pan.baidu.com/s/*
@@ -46,30 +46,24 @@
     if (bd_left !== undefined && bd_left !== null) {
         bd_left.css("margin-right", "0px");
     }
+    let timeid;
     let changeName = function() {
         let userName = $("a.share-person-username.global-ellipsis").html();
+        if(userName!==undefined){
+          return;
+        }
         let img = $("#bd > div.bd-aside > div.module-share-person-info > div.share-person-inner.global-clearfix.haha > div.share-person-avatar > a.person-icon > img");
         $(".slide-show-left > h2").html($(".slide-show-left > h2").html() + "  分享自:" + userName + "   ");
         img.width(35).height(35).css("border-radius", "15px");
         img.appendTo("#bd-main > div > div.module-share-header > div > div.slide-show-left > h2");
-
+        if(timeid!=null){
+          window.clearInterval(timeid); 
+        }
     };
 
     $(document).ready(
         function() {
-            let isReady = false;
-            let exitTime = (new Date()).getTime() + 2000;
-            while (!isReady) {
-                let userName = $("a.share-person-username.global-ellipsis").html();
-                if (userName !== undefined) {
-                    changeName();
-                    isReady = true;
-                } else {
-                    if ((new Date()).getTime() > exitTime) {
-                        isReady = true;
-                    }
-                }
-            }
+            timeid = window.setInterval(changeName，500);
         }
     );
 })();
