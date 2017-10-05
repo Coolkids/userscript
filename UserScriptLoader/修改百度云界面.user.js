@@ -41,12 +41,12 @@
 
     $(".g-button").css("border-radius", "0px");
 
-
     let bd_left = $("#bd-main > .bd-left");
     if (bd_left !== undefined && bd_left !== null) {
         bd_left.css("margin-right", "0px");
     }
     let timeid;
+    let exitTime = (new Date()).getTime()+12000;
     let changeName = function() {
         let userName = $("a.share-person-username.global-ellipsis").html();
         if(userName!==undefined){
@@ -59,11 +59,12 @@
         if(timeid!=null){
           window.clearInterval(timeid); 
         }
+        if(now.getTime() > exitTime){
+          if(timeid!=null){
+            window.clearInterval(timeid); 
+          }
+        }
     };
 
-    $(document).ready(
-        function() {
-            timeid = window.setInterval(changeName，500);
-        }
-    );
+    timeid = window.setInterval(changeName，500);
 })();
