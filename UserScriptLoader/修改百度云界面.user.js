@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         修改百度云界面
-// @version      0.0.2
+// @version      0.0.3
 // @description  修改百度云界面!
 // @author       Coolkid
 // @match        *://pan.baidu.com/s/*
@@ -9,6 +9,7 @@
 // @match        *://yun.baidu.com/share/link*
 // @require      http://code.jquery.com/jquery-2.1.1.min.js
 // @grant        unsafeWindow
+// @run-at      document-end
 // ==/UserScript==
 
 (function() {
