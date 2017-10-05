@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         修改百度云界面
-// @version      0.0.4
+// @version      0.0.5
 // @description  修改百度云界面!
 // @author       Coolkid
 // @match        *://pan.baidu.com/s/*
@@ -49,22 +49,22 @@
     let exitTime = (new Date()).getTime()+12000;
     let changeName = function() {
         let userName = $("a.share-person-username.global-ellipsis").html();
-        if(userName!==undefined){
+        if(userName===undefined){
           return;
         }
         let img = $("#bd > div.bd-aside > div.module-share-person-info > div.share-person-inner.global-clearfix.haha > div.share-person-avatar > a.person-icon > img");
         $(".slide-show-left > h2").html($(".slide-show-left > h2").html() + "  分享自:" + userName + "   ");
         img.width(35).height(35).css("border-radius", "15px");
         img.appendTo("#bd-main > div > div.module-share-header > div > div.slide-show-left > h2");
-        if(timeid!=null){
-          window.clearInterval(timeid); 
+        if(timeid!==null){
+          window.clearInterval(timeid);
         }
         if(now.getTime() > exitTime){
-          if(timeid!=null){
-            window.clearInterval(timeid); 
+          if(timeid!==null){
+            window.clearInterval(timeid);
           }
         }
     };
 
-    timeid = window.setInterval(changeName，500);
+    timeid = window.setInterval(changeName, 500);
 })();
