@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         修改百度云界面
-// @version      0.0.5
+// @version      0.0.6
 // @description  修改百度云界面!
 // @author       Coolkid
 // @match        *://pan.baidu.com/s/*
@@ -59,6 +59,7 @@
         if(timeid!==null){
           window.clearInterval(timeid);
         }
+        let now = new Date();
         if(now.getTime() > exitTime){
           if(timeid!==null){
             window.clearInterval(timeid);

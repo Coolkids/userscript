@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       cnbeta 工具
-// @version    0.0.8
+// @version    0.0.10
 // @description  cnbeta 工具
 // @include      http://*.cnbeta.com/*
 // @include      https://*.cnbeta.com/*
@@ -11,36 +11,72 @@
 // ==/UserScript==
 (function() {
     'use strict';
-    var a = function(){
-        var div = $("div[style*='important']");
-        //console.log(div.html());
-        div.remove();
-        var body = $("body");
-        body.css("padding-top","0px");
-    };
-    var b = function(){
-        var img = $("img[original]");
-        img.each(function(){
-            var newimg = $(this).attr("original");
-            var oldimg = $(this).attr("src");
-            if(oldimg!=newimg&&newimg!="null"){
-                console.log($(this).attr("src")+"替换为"+$(this).attr("original"));
-                $(this).attr("src", newimg);
-            }
+    var oe = this.eval;
+    var uw = this;
+    var $ = this.jQuery;
+    try {
+        uw.checkBlock = {
+            on: function() {}
+        };
+        uw.document.addEventListener("DOMContentLoaded", function() {
+            if (uw.CheckBlock) uw.CheckBlock.prototype.on = function() {};
         });
-    };
-    a();
-    setTimeout(b, 1000);
-    var c = function(){
-        var alist = $("body > div.main-wrap > div.cnbeta-update > div > div.cnbeta-update-list > div.items-area a");
-        alist.each(function(){
-            var oldtitle = $(this).text();
-            var newtitle = oldtitle.replace(/^[^！]+！/, "");
-            if(oldtitle.indexOf("！")>-1){
-                $(this).text(newtitle);
-                console.log("原标题<"+oldtitle+">替换为<"+newtitle+">");
+    } catch (e) {}
+    var checkCount = 0;
+    var fn = function() {
+        try {
+            var eles = Array.prototype.slice.call(document.querySelectorAll("body>div[id][style*='important']>div[style*='fixed']"));
+            if (eles.length) {
+                eles.forEach(function(ele) {
+                    ele.parentNode.remove();
+                });
+            } else {
+                if (checkCount++ < 200) {
+                    setTimeout(fn, 20);
+                }
             }
-        });
+        } catch (e) {}
     };
-    //setTimeout(c, 1000);
+    fn();
+    (function() {
+        var style = document.createElement("style");
+        style.textContent = ".cbhelp{height:" + Math.round((Math.random() + 1) * 113) + "px!important; width:" + Math.round((Math.random() + 1) * 113) + "px!important; visibility: hidden; position: fixed; opacity:0; left: " + Math.round((((Math.random() + 1) * 2000) * (Math.random() > 0.5 ? 1 : -1))) + "px; }";
+        document.head.appendChild(style);
+    })();
+    Object.defineProperty(uw, "onload", {
+        get: function() {},
+        set: function() {}
+    });
+    (function() {
+        uw[atob("cmFuZG9tU3RyaW5n")] = function() {
+            throw '求推荐综合性的IT资讯站点，这些年看Cnbeta看得有点不怎么了解IT界了';
+        };
+        var processed = false;
+        /*
+        if (!processed && $.fn.removeClass) {
+            processed = !0;
+            var bak = $.fn.removeClass;
+            $.fn.removeClass = function() {
+                /*if (cls.indexOf("cbhelp") === -1) {
+
+                }**
+                bak.apply(this, Array.prototype.slice.call(arguments));
+                    //return;
+                var eles = $('.cbhelp');
+                eles.each(function() {
+                    var template = document.createElement("template");
+                    var ele = document.createElement("div");
+                    this.appendChild(ele);
+                    this.style = "position:fixed;opacity:0; left: " + Math.round((((Math.random() + 1) * 2000) * (Math.random() > 0.5 ? 1 : -1))) + "px;";
+                    template.innerHTML = "<div style='height:" + Math.round((Math.random() + 1) * 113) + "px!important; width:" + Math.round((Math.random() + 1) * 113) + "px!important; visibility: hidden; opacity:0; left: " + Math.round((((Math.random() + 1) * 2000) * (Math.random() > 0.5 ? 1 : -1))) + "px;'>求推荐综合性的IT资讯站点，这些年看Cnbeta看得有点不怎么了解IT界了</div>";
+                    var sr = ele.attachShadow && ele.attachShadow({
+                        mode: "closed"
+                    }) || ele.createShadowRoot();
+                    var child = document.importNode(template, true);
+                    sr.appendChild(child.content);
+                });
+            };
+        }
+     */
+    })();
 }).apply(unsafeWindow);
