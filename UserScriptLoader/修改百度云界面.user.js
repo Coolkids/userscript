@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         修改百度云界面
-// @version      0.0.6
+// @version      0.0.7
 // @description  修改百度云界面!
 // @author       Coolkid
 // @match        *://pan.baidu.com/s/*
@@ -38,7 +38,7 @@
         dir.height($(document).height() * 0.6);
 
     }
-
+    $("#bd-main > div > div.module-share-header > div > div.slide-show-right > div > div > div.button-box").width("100%");
     $(".g-button").css("border-radius", "0px");
 
     let bd_left = $("#bd-main > .bd-left");
