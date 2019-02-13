@@ -65,7 +65,7 @@
             //天使论坛
             qd();
             console.log(window.find("签到领奖"), (window.location.href!="/plugin.php?id=dsu_paulsign:sign"));
-            if(window.find("签到领奖")&&(window.location.href!="/plugin.php?id=dsu_paulsign:sign")){
+            if(window.find("签到领奖")&&!isURL("dsu_paulsign:sign")){
                 window.location.href="/plugin.php?id=dsu_paulsign:sign";
                 return;
             }
