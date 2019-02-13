@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name       DZ论坛签到工具
-// @version    0.2.7
+// @version    0.2.8
 // @description  自动签到工具
-// @include      http://*/plugin.php?id=dsu_paulsign*
+// @include      htt*://*/plugin.php?id=dsu_paulsign*
 // @include      http://bbs.kafan.cn/*
-// @include      http://www.tsdm.me/*
+// @include      htt*://www.tsdm.*/*
 // @include      htt*://www.lightnovel.cn/home.php?mod=task
 // @include      http://www.mddmm.com/dsu_paulsign-sign.html
 // @require      http://code.jquery.com/jquery-2.1.1.min.js
@@ -64,9 +64,9 @@
         if(isURL("tsdm")){
             //天使论坛
             qd();
-            console.log(window.find("签到领奖"), (window.location.href!="http://www.tsdm.me/plugin.php?id=dsu_paulsign:sign"));
-            if(window.find("签到领奖")&&(window.location.href!="http://www.tsdm.me/plugin.php?id=dsu_paulsign:sign")){
-                window.location.href="http://www.tsdm.me/plugin.php?id=dsu_paulsign:sign";
+            console.log(window.find("签到领奖"), (window.location.href!="/plugin.php?id=dsu_paulsign:sign"));
+            if(window.find("签到领奖")&&(window.location.href!="/plugin.php?id=dsu_paulsign:sign")){
+                window.location.href="/plugin.php?id=dsu_paulsign:sign";
                 return;
             }
         }else if(isURL("kafan")){
@@ -87,7 +87,7 @@
                 }
             })
             if(a&&b){
-                window.location.href="http://www.lightnovel.cn/home.php?mod=task&do=apply&id=98";
+                window.location.href="/home.php?mod=task&do=apply&id=98";
                 return;
             }
         }else{
